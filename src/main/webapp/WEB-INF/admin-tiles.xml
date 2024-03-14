@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<!-- Định nghĩa các view default -->
+
+	<definition name="adminlogin"
+		template="/WEB-INF/views/admin/layouts/adminlogin.jsp">
+
+		<put-attribute name="title" value="Login" type="string" />
+
+	</definition>
+
+
+
+	<definition name="adminlayout"
+		template="/WEB-INF/views/admin/layouts/adminlayout.jsp">
+
+		<put-attribute name="title"
+			value="Ví dụ về Apache tile 3" type="string" />
+
+
+		<put-attribute name="menubar"
+			value="/WEB-INF/views/admin/layouts/menubar.jsp" />
+
+		<put-attribute name="body" value="" />
+
+	</definition>
+
+	<!-- Định nghĩa các view khác -->
+
+	<definition name="admin" extends="adminlayout">
+
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/admin.jsp" />
+
+	</definition>
+
+	<!-- Category -->
+	<definition name="listCategory" extends="adminlayout">
+
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/category/listCategory.jsp" />
+
+	</definition>
+
+	<definition name="addCategory" extends="adminlayout">
+
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/category/addCategory.jsp" />
+
+	</definition>
+
+	<definition name="editCategory" extends="adminlayout">
+
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/category/editCategory.jsp" />
+
+	</definition>
+
+
+	<!-- Product -->
+	<definition name="listProduct" extends="adminlayout">
+
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/product/listProduct.jsp" />
+
+	</definition>
+	
+	<definition name="addProduct" extends="adminlayout">
+
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/product/addProduct.jsp" />
+
+	</definition>
+	
+	<definition name="editProduct" extends="adminlayout">
+
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/product/editProduct.jsp" />
+
+	</definition>
+</tiles-definitions>

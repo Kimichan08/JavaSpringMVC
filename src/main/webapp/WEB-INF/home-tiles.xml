@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<!-- Định nghĩa các view default -->
+
+	<definition name="homelayout"
+		template="/WEB-INF/views/customer/layout/homelayout.jsp">
+
+		<put-attribute name="title"
+			value="Ví dụ về Apache tile 3" type="string" />
+			
+		<put-attribute name="menubar"
+			value="/WEB-INF/views/customer/layout/menubar.jsp" />
+
+		<put-attribute name="footer"
+			value="/WEB-INF/views/customer/layout/footer.jsp" />
+		<put-attribute name="body" value="" />
+
+	</definition>
+
+	<!-- Định nghĩa các view khác -->
+
+	<definition name="home" extends="homelayout">
+
+		<put-attribute name="body"
+			value="/WEB-INF/views/customer/home.jsp" />
+
+	</definition>
+	
+	<definition name="shop" extends="homelayout">
+
+		<put-attribute name="body"
+			value="/WEB-INF/views/customer/shop.jsp" />
+
+	</definition>
+	
+	<definition name="detail" extends="homelayout">
+
+		<put-attribute name="body"
+			value="/WEB-INF/views/customer/detail.jsp" />
+
+	</definition>
+	
+	<definition name="cart" extends="homelayout">
+		<put-attribute name="body"
+			value="/WEB-INF/views/customer/cart.jsp" />
+	</definition>
+	
+	<definition name="blog" extends="homelayout">
+		<put-attribute name="body"
+			value="/WEB-INF/views/customer/blog.jsp" />
+	</definition>
+	
+	<definition name="contact" extends="homelayout">
+		<put-attribute name="body"
+			value="/WEB-INF/views/customer/contact.jsp" />
+	</definition>
+	
+	<definition name="logincus" extends="homelayout">
+
+		<put-attribute name="body"
+			value="/WEB-INF/views/customer/login.jsp" />
+
+	</definition>
+	
+
+</tiles-definitions>
